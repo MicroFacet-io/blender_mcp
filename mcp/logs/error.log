@@ -1,0 +1,188 @@
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+error: Failed to spawn: `D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191`
+  Caused by: The system cannot find the file specified. (os error 2)
+INFO:     Started server process [35184]
+INFO:     Waiting for application startup.
+[11/11/26 20:19:06] INFO     StreamableHTTP      streamable_http_manager.py:164
+                             session manager                                   
+                             started                                           
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9191 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[11/11/26 20:19:13] INFO     StreamableHTTP      streamable_http_manager.py:168
+                             session manager                                   
+                             shutting down                                     
+INFO:     Application shutdown complete.
+INFO:     Finished server process [35184]
+Traceback (most recent call last):
+  File "C:\Users\SayantanPaul\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SayantanPaul\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Sayantan-code\blender_mcp\mcp\.venv\Scripts\blender-mcp.exe\__main__.py", line 10, in <module>
+  File "D:\Sayantan-code\blender_mcp\mcp\blmcp\__init__.py", line 105, in main
+    mcp.run(transport=transport)
+  File "D:\Sayantan-code\blender_mcp\mcp\.venv\Lib\site-packages\mcp\server\fastmcp\server.py", line 316, in run
+    anyio.run(self.run_streamable_http_async)
+  File "D:\Sayantan-code\blender_mcp\mcp\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 83, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Sayantan-code\blender_mcp\mcp\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2621, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SayantanPaul\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+^CINFO:     Started server process [10724]
+INFO:     Waiting for application startup.
+[11/11/26 20:19:19] INFO     StreamableHTTP      streamable_http_manager.py:164
+                             session manager                                   
+                             started                                           
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:9191 (Press CTRL+C to quit)
+[11/11/26 20:19:27] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:21:08] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+[11/11/26 20:21:09] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:23:54] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:24:09] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:33:41] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:33:56] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:35:00] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:36:14] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:36:34] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:36:35] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:36:39] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:36:40] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:37:48] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:38:03] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:40:11] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:41:36] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:41:51] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:42:16] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:42:31] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:42:36] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:42:45] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:42:51] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:43:08] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:43:23] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[11/11/26 20:43:25] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:44:19] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[11/11/26 20:44:21] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:51:09] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:52:27] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:52:33] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:52:38] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 20:52:42] INFO     Terminating session: None   streamable_http.py:831
+[11/11/26 21:32:50] INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:19:21] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[11/12/26 00:19:22] INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:19:35] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:21:10] INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:21:11] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:21:21] INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Terminating session: None   streamable_http.py:831
+                    INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+                    INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:22:03] INFO     Processing request of type           server.py:733
+                             CallToolRequest                                   
+[11/12/26 00:22:05] INFO     Terminating session: None   streamable_http.py:831
+[11/12/26 00:22:10] INFO     Terminating session: None   streamable_http.py:831

@@ -1,0 +1,163 @@
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run "D:\Sayantan-code\blender_mcp\mcp\blender-mcp --transport http --port 9191" 
+
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run blender-mcp --transport http --port 9191 
+Terminate batch job (Y/N)? 
+D:\Sayantan-code\blender_mcp\mcp>call "D:\Sayantan-code\blender_mcp\mcp\.venv/Scripts/activate.bat" wait 
+
+D:\Sayantan-code\blender_mcp\mcp>set OLD_PYTHON_PATH=C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\Scripts;C:\Users\SayantanPaul\AppData\Roaming\Python\Python313\site-packages; 
+
+D:\Sayantan-code\blender_mcp\mcp>set PYTHONPATH=d:\Sayantan-code\Microfacet work\PipelinePOC\.venv\Scripts 
+
+(blender-mcp) D:\Sayantan-code\blender_mcp\mcp>uv run blender-mcp --transport http --port 9191 
+INFO:     192.168.50.120:51319 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51319 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51319 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51320 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51320 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51319 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:62523 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:50165 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:61409 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:62523 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:57037 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:61409 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:50165 - "POST / HTTP/1.1" 202 Accepted
+INFO:     10.6.0.2:62523 - "POST / HTTP/1.1" 202 Accepted
+INFO:     10.6.0.2:50165 - "GET / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:54596 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:62523 - "GET / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:57037 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51378 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51381 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51386 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51387 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51533 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51536 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51542 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51543 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51558 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51559 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51562 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51563 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51580 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51580 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51580 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51581 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51580 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51581 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:54444 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:51544 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:54444 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:51544 - "POST / HTTP/1.1" 202 Accepted
+INFO:     10.6.0.2:51544 - "GET / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:54444 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:54444 - "POST / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:62685 - "POST / HTTP/1.1" 202 Accepted
+INFO:     10.6.0.2:54444 - "GET / HTTP/1.1" 200 OK
+INFO:     10.6.0.2:62685 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51610 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51612 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51619 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51620 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51641 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51644 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51650 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51651 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51661 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51662 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51666 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51668 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51674 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51675 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51683 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51684 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51688 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51690 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51694 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51696 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51700 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51709 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51747 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51748 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51755 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51756 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51764 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51765 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51768 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51771 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:51776 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:51777 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53006 - "OPTIONS / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53006 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53007 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53034 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53034 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:53034 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53043 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53054 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53054 - "POST / HTTP/1.1" 202 Accepted
+INFO:     192.168.50.120:53054 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53056 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53061 - "POST / HTTP/1.1" 200 OK
+INFO:     192.168.50.120:53061 - "POST / HTTP/1.1" 202 Accepted
