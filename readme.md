@@ -1,5 +1,7 @@
 # Blender MCP
 
+This project is a fork of https://projects.blender.org/lab/blender_mcp
+
 ## Overview
 
 A lightweight MCP (Model Context Protocol) server for Blender.
