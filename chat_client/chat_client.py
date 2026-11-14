@@ -201,8 +201,13 @@ async def _call_tool(
     session: ClientSession,
     name: str,
     arguments: dict[str, Any],
+    blender_host: str = "",
+    host_tools: frozenset[str] = frozenset(),
 ) -> str:
     """Call an MCP tool and return a text summary of the result."""
+    if blender_host and name in host_tools:
+        # Always use the address the user entered, never one the LLM made up.
+        arguments = {**arguments, "blender_host": blender_host}
     result = await session.call_tool(name, arguments)
     parts: list[str] = []
     for item in result.content:
@@ -216,6 +221,23 @@ async def _call_tool(
     if result.isError:
         return "ERROR: {:s}".format(text)
     return text
+
+
+def _ask_blender_host(previous: str) -> str:
+    """
+    Ask the user for the IP address of the machine running their Blender add-on.
+
+    Asked on every prompt, pressing Enter re-uses the previous address.
+    Raises ``EOFError`` / ``KeyboardInterrupt`` when input is closed.
+    """
+    while True:
+        label = "Blender IP address [{:s}]: ".format(previous) if previous else "Blender IP address: "
+        value = input(label).strip()
+        if value:
+            return value
+        if previous:
+            return previous
+        print("An IP address is required.")
 
 
 # ---------------------------------------------------------------------------
@@ -252,6 +274,15 @@ async def _run(
             instructions = init_result.instructions or ""
             tools_result = await session.list_tools()
 
+            # Tools that connect to Blender accept `blender_host`.
+            host_tools = frozenset(
+                t.name for t in tools_result.tools
+                if "blender_host" in (t.inputSchema.get("properties") or {})
+            )
+            blender_host: str = opts.get("blender_host") or ""
+            if non_interactive and host_tools and not blender_host:
+                print("Error: --blender-host (or BLENDER_MCP_HOST) is required with --prompt / --non-interactive.")
+                return
             mcp_tools = [
                 {
                     "name": t.name,
@@ -297,6 +328,9 @@ async def _run(
                 else:
                     try:
                         user_input = input("\n> ")
+                        if user_input.strip():
+                            # The user's address may change at any time, ask on every prompt.
+                            blender_host = _ask_blender_host(blender_host)
                     except (EOFError, KeyboardInterrupt):
                         print()
                         break
@@ -304,6 +338,11 @@ async def _run(
                     if not user_input.strip():
                         continue
 
+                if blender_host:
+                    user_input = (
+                        "{:s}\n\n[Blender add-on IP address for this prompt: {:s}. "
+                        "Pass it as `blender_host` to every Blender tool call.]"
+                    ).format(user_input, blender_host)
                 messages.append({"role": "user", "content": user_input})
 
                 # LLM loop: keep calling the API until we get a plain text
@@ -347,7 +386,7 @@ async def _run(
                             for tc_id, tc_name, tc_args in tool_calls:
                                 print("  -> calling {:s}".format(tc_name))
                                 result_text = await _call_tool(
-                                    session, tc_name, tc_args,
+                                    session, tc_name, tc_args, blender_host, host_tools,
                                 )
                                 messages.append({
                                     "role": "tool",
@@ -359,7 +398,7 @@ async def _run(
                             for tc_id, tc_name, tc_args in tool_calls:
                                 print("  -> calling {:s}".format(tc_name))
                                 result_text = await _call_tool(
-                                    session, tc_name, tc_args,
+                                    session, tc_name, tc_args, blender_host, host_tools,
                                 )
                                 tool_results.append({
                                     "type": "tool_result",
@@ -406,6 +445,14 @@ def main() -> None:
         "--non-interactive",
         action="store_true",
         help="Print the reply and exit after a single turn.",
+    )
+    parser.add_argument(
+        "--blender-host",
+        default=os.environ.get("BLENDER_MCP_HOST"),
+        help=(
+            "IP address of the user's Blender add-on, required with --prompt / --non-interactive "
+            "(default: $BLENDER_MCP_HOST). In interactive mode it is asked for on every prompt."
+        ),
     )
 
     subparsers = parser.add_subparsers(dest="provider", required=True)
@@ -461,7 +508,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    opts: dict[str, Any] = {"model": args.model}
+    opts: dict[str, Any] = {"model": args.model, "blender_host": args.blender_host}
     if args.provider == "claude":
         opts["api_key"] = os.environ.get("ANTHROPIC_API_KEY")
         opts["max_tokens"] = args.max_tokens

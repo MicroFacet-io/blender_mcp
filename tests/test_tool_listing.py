@@ -36,12 +36,18 @@ EXPECTED_TOOLS = [
         "interactive addon server, and is rejected in background mode.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "code": {
                     "title": "Code",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "code"
             ],
             "title": "execute_blender_codeArguments",
@@ -57,6 +63,11 @@ EXPECTED_TOOLS = [
         "Assign a dict to ``result`` to return data.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
@@ -67,6 +78,7 @@ EXPECTED_TOOLS = [
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file",
                 "code"
             ],
@@ -79,7 +91,16 @@ EXPECTED_TOOLS = [
         "description": "\n"
         "Return a summary of the blend file: data-block counts, active workspace, and render engine.\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_blendfile_summary_datablocksArguments",
             "type": "object"
         }
@@ -90,12 +111,18 @@ EXPECTED_TOOLS = [
         "Return a data-block summary by opening *blend_file* in background Blender.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file"
             ],
             "title": "get_blendfile_summary_datablocks_for_cliArguments",
@@ -108,7 +135,16 @@ EXPECTED_TOOLS = [
         "Report external file references that are missing from disk\n"
         "(images, libraries, fonts, sounds, movie clips, caches, sequences).\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_blendfile_summary_missing_filesArguments",
             "type": "object"
         }
@@ -119,12 +155,18 @@ EXPECTED_TOOLS = [
         "Report missing file references by opening *blend_file* in background Blender.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file"
             ],
             "title": "get_blendfile_summary_missing_files_for_cliArguments",
@@ -136,7 +178,16 @@ EXPECTED_TOOLS = [
         "description": "\n"
         "Return a tree of directly and indirectly linked library files.\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_blendfile_summary_of_linked_librariesArguments",
             "type": "object"
         }
@@ -147,12 +198,18 @@ EXPECTED_TOOLS = [
         "Return linked-library info by opening *blend_file* in background Blender.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file"
             ],
             "title": "get_blendfile_summary_of_linked_libraries_for_cliArguments",
@@ -164,7 +221,16 @@ EXPECTED_TOOLS = [
         "description": "\n"
         "Simple/fast access to the blend file's path, save status, age, and backups.\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_blendfile_summary_path_infoArguments",
             "type": "object"
         }
@@ -175,12 +241,18 @@ EXPECTED_TOOLS = [
         "Return path info by opening *blend_file* in background Blender.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file"
             ],
             "title": "get_blendfile_summary_path_info_for_cliArguments",
@@ -192,7 +264,16 @@ EXPECTED_TOOLS = [
         "description": "\n"
         "Guess the primary use-cases of the current blend file (scored 0-100 with certainty).\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_blendfile_summary_usage_guessArguments",
             "type": "object"
         }
@@ -203,12 +284,18 @@ EXPECTED_TOOLS = [
         "Guess use-cases by opening *blend_file* in background Blender.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "blend_file": {
                     "title": "Blend File",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "blend_file"
             ],
             "title": "get_blendfile_summary_usage_guess_for_cliArguments",
@@ -224,12 +311,18 @@ EXPECTED_TOOLS = [
         "materials, visibility, data-block name, and collections.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "name": {
                     "title": "Name",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "name"
             ],
             "title": "get_object_detail_summaryArguments",
@@ -244,7 +337,16 @@ EXPECTED_TOOLS = [
         "Each collection lists its objects (name, type, parent, data name,\n"
         "selection, visibility) and nested child collections.\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_objects_summaryArguments",
             "type": "object"
         }
@@ -326,6 +428,11 @@ EXPECTED_TOOLS = [
         "Zero (the default) uses the MCP message size limit.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "area_ui_type": {
                     "enum": [
                         "VIEW_3D",
@@ -361,6 +468,7 @@ EXPECTED_TOOLS = [
                 }
             },
             "required": [
+                "blender_host",
                 "area_ui_type"
             ],
             "title": "get_screenshot_of_area_as_imageArguments",
@@ -376,12 +484,20 @@ EXPECTED_TOOLS = [
         "Zero (the default) uses the MCP message size limit.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "size_limit_in_bytes": {
                     "default": 0,
                     "title": "Size Limit In Bytes",
                     "type": "integer"
                 }
             },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_screenshot_of_window_as_imageArguments",
             "type": "object"
         }
@@ -391,7 +507,16 @@ EXPECTED_TOOLS = [
         "description": "\n"
         "Return a JSON description of the Blender window layout, areas, active object, and selection.\n",
         "inputSchema": {
-            "properties": {},
+            "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "blender_host"
+            ],
             "title": "get_screenshot_of_window_as_jsonArguments",
             "type": "object"
         }
@@ -402,12 +527,18 @@ EXPECTED_TOOLS = [
         "Switch the active workspace tab to *name*.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "name": {
                     "title": "Name",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "name"
             ],
             "title": "jump_to_tab_by_nameArguments",
@@ -423,6 +554,11 @@ EXPECTED_TOOLS = [
         "is created by duplicating the current workspace.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "space_type": {
                     "title": "Space Type",
                     "type": "string"
@@ -434,6 +570,7 @@ EXPECTED_TOOLS = [
                 }
             },
             "required": [
+                "blender_host",
                 "space_type"
             ],
             "title": "jump_to_tab_by_space_typeArguments",
@@ -449,6 +586,11 @@ EXPECTED_TOOLS = [
         "collections enabled to make it visible.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "name": {
                     "title": "Name",
                     "type": "string"
@@ -460,6 +602,7 @@ EXPECTED_TOOLS = [
                 }
             },
             "required": [
+                "blender_host",
                 "name"
             ],
             "title": "jump_to_view3d_object_by_nameArguments",
@@ -475,6 +618,11 @@ EXPECTED_TOOLS = [
         "collections enabled to make it visible.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "name": {
                     "title": "Name",
                     "type": "string"
@@ -486,6 +634,7 @@ EXPECTED_TOOLS = [
                 }
             },
             "required": [
+                "blender_host",
                 "name"
             ],
             "title": "jump_to_view3d_object_data_by_nameArguments",
@@ -498,12 +647,18 @@ EXPECTED_TOOLS = [
         "Render a small, low-quality thumbnail to *output_path* (temporarily overrides settings).\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "output_path": {
                     "title": "Output Path",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "output_path"
             ],
             "title": "render_thumbnail_to_pathArguments",
@@ -516,12 +671,18 @@ EXPECTED_TOOLS = [
         "Render the current scene to *output_path* using current render settings.\n",
         "inputSchema": {
             "properties": {
+                "blender_host": {
+                    "description": "Required. IP address (or host name) of the machine running the user's Blender add-on. Use the address the user entered with their current prompt.",
+                    "title": "Blender Host",
+                    "type": "string"
+                },
                 "output_path": {
                     "title": "Output Path",
                     "type": "string"
                 }
             },
             "required": [
+                "blender_host",
                 "output_path"
             ],
             "title": "render_viewport_to_pathArguments",
@@ -575,8 +736,12 @@ EXPECTED_TOOLS = [
                 },
                 "index": {
                     "anyOf": [
-                        {"type": "integer"},
-                        {"type": "null"}
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
                     ],
                     "default": None,
                     "title": "Index"
@@ -636,8 +801,12 @@ EXPECTED_TOOLS = [
                 },
                 "index": {
                     "anyOf": [
-                        {"type": "integer"},
-                        {"type": "null"}
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
                     ],
                     "default": None,
                     "title": "Index"

@@ -9,7 +9,7 @@ __all__ = (
 )
 
 from blmcp.tools_helpers.blender_cli import run_blender_cli, synced_blend_for_cli
-from blmcp.tools_helpers.connection import send_code
+from blmcp.tools_helpers.connection import BlenderHost, send_code
 from mcp.server.fastmcp import FastMCP  # pylint: disable=import-error,no-name-in-module
 from mcp.types import ToolAnnotations  # pylint: disable=import-error,no-name-in-module
 
@@ -21,7 +21,7 @@ def register(mcp: FastMCP) -> None:
             destructiveHint=True,
         )
     )
-    def execute_blender_code(code: str) -> dict[str, object]:
+    def execute_blender_code(blender_host: BlenderHost, code: str) -> dict[str, object]:
         """
         Execute Python code in the connected Blender instance.
 
@@ -32,7 +32,7 @@ def register(mcp: FastMCP) -> None:
         """
         # Not strict: LLM-generated code may return non-JSON-serializable values
         # (e.g. Blender objects). Use `repr` as a fallback instead of erroring.
-        return send_code(code, strict_json=False)
+        return send_code(code, strict_json=False, host=blender_host)
 
     @mcp.tool(
         annotations=ToolAnnotations(
@@ -40,7 +40,11 @@ def register(mcp: FastMCP) -> None:
             destructiveHint=True,
         )
     )
-    def execute_blender_code_for_cli(blend_file: str, code: str) -> dict[str, object]:
+    def execute_blender_code_for_cli(
+        blender_host: BlenderHost,
+        blend_file: str,
+        code: str,
+    ) -> dict[str, object]:
         """
         Execute Python code in a background Blender process.
 
@@ -49,7 +53,7 @@ def register(mcp: FastMCP) -> None:
         """
         # LLM-generated code may return non-JSON-serializable values
         # (e.g. Blender objects), handled by `run_blender_cli` via `default=repr`.
-        with synced_blend_for_cli(blend_file) as synced_path:
+        with synced_blend_for_cli(blend_file, blender_host) as synced_path:
             value = run_blender_cli(synced_path, code)
             assert isinstance(value, dict), "Expected dict from `run_blender_cli`, got {!r}".format(type(value))
             return value

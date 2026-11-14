@@ -108,11 +108,11 @@ def _numbered_blend_path(filepath: str) -> str:
 
 
 @contextlib.contextmanager
-def synced_blend_for_cli(blend_file: str) -> Generator[str, None, None]:
+def synced_blend_for_cli(blend_file: str, blender_host: str) -> Generator[str, None, None]:
     """
     Context manager that ensures *blend_file* reflects unsaved changes.
 
-    When a running Blender instance has the same file open with unsaved
+    When a running Blender instance (at *blender_host*) has the same file open with unsaved
     modifications, a numbered copy is saved and yielded. The copy is
     deleted on exit. When no instance is reachable or the file is clean,
     *blend_file* is yielded unchanged.
@@ -124,6 +124,7 @@ def synced_blend_for_cli(blend_file: str) -> Generator[str, None, None]:
                 "import bpy, os\n"
                 "result = {\"is_dirty\": bpy.data.is_dirty, \"filepath\": bpy.data.filepath}\n",
                 strict_json=True,
+                host=blender_host,
             )
         except ConnectionError:
             # No running Blender instance, use the on-disk file as-is.
@@ -155,6 +156,7 @@ def synced_blend_for_cli(blend_file: str) -> Generator[str, None, None]:
             "import bpy\n"
             "bpy.ops.wm.save_as_mainfile(filepath={!r}, copy=True)\n".format(temp_path),
             strict_json=True,
+            host=blender_host,
         )
         if save_response.get("status") != "ok":
             raise RuntimeError(str(save_response.get("message", "Unknown error")))

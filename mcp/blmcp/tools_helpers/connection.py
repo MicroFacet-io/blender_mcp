@@ -9,6 +9,7 @@ Used by MCP "tools" that send-code to the Blender add-on.
 """
 
 __all__ = (
+    "BlenderHost",
     "get_connection_params",
     "send_code",
 )
@@ -16,22 +17,52 @@ __all__ = (
 import json
 import os
 import socket
+import sys
+from typing import Annotated
 
-_DEFAULT_HOST = "localhost"
+from pydantic import Field
+
 _DEFAULT_PORT = 9876
 _TIMEOUT = 300.0
 _RECV_BUFFER_SIZE = 65536
 
+# Shared tool parameter type: the IP address / host name of the user's Blender add-on.
+# The frontend asks the user for it on every prompt and passes it with every tool call.
+BlenderHost = Annotated[
+    str,
+    Field(
+        description=(
+            "Required. IP address (or host name) of the machine running the user's Blender add-on. "
+            "Use the address the user entered with their current prompt."
+        ),
+    ),
+]
 
-def get_connection_params() -> tuple[str, int]:
-    host = os.environ.get("BLENDER_MCP_HOST", _DEFAULT_HOST)
+
+def get_connection_params(host: str) -> tuple[str, int]:
+    """
+    Return the ``(host, port)`` of the Blender add-on.
+
+    *host* is the address supplied by the user with the tool call, it is required:
+    ``ValueError`` is raised when it is empty (there is no fallback to ``localhost``).
+    The port is ``BLENDER_MCP_PORT`` (default 9876).
+    """
+    host = (host or "").strip()
+    if not host:
+        raise ValueError(
+            "`blender_host` is required: provide the IP address of the machine running the Blender add-on."
+        )
     port = int(os.environ.get("BLENDER_MCP_PORT", str(_DEFAULT_PORT)))
+    # stderr: stdout carries the MCP protocol in stdio mode.
+    print("Incoming Blender target: {:s}:{:d}".format(host, port), file=sys.stderr, flush=True)
     return host, port
 
 
-def send_code(code: str, strict_json: bool) -> dict[str, object]:
+def send_code(code: str, strict_json: bool, host: str) -> dict[str, object]:
     """
     Send Python code to the Blender add-on socket server for execution.
+
+    *host* is the user supplied add-on address (see ``get_connection_params``), it is required.
 
     Returns the full response dict from the add-on containing
     ``status`` (``"ok"`` or ``"error"``), ``result`` (on success),
@@ -41,7 +72,7 @@ def send_code(code: str, strict_json: bool) -> dict[str, object]:
     Raises ``ConnectionError`` when Blender is unreachable or
     returns an invalid response.
     """
-    host, port = get_connection_params()
+    host, port = get_connection_params(host)
     request = json.dumps({
         "type": "execute",
         "code": code,

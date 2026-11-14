@@ -36,7 +36,7 @@ import traceback
 from collections.abc import Callable
 from typing import NamedTuple
 
-DEFAULT_HOST = "localhost"
+DEFAULT_HOST = "0.0.0.0"
 DEFAULT_PORT = 9876
 
 # Seconds between main-thread timer ticks.

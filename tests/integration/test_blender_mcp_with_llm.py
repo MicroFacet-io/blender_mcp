@@ -815,6 +815,7 @@ class TestChatClient(unittest.TestCase):
                 self._venv_python, chat_client,
                 "--server-command", self._blender_mcp_cmd,
                 "--non-interactive",
+                "--blender-host", "localhost",
                 "--prompt", prompt,
             ] + provider_args,
             stdout=subprocess.PIPE,

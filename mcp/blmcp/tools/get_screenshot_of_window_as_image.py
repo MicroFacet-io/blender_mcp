@@ -15,7 +15,7 @@ from blmcp.tools_helpers import (
     toolcode_load_from_filepath,
     toolcode_wrap_with_calling_convention,
 )
-from blmcp.tools_helpers.connection import send_code
+from blmcp.tools_helpers.connection import BlenderHost, send_code
 from blmcp.tools.get_screenshot_of_window_as_image_toolcode import Params
 from mcp.server.fastmcp import FastMCP, Image  # pylint: disable=import-error,no-name-in-module
 from mcp.types import ToolAnnotations  # pylint: disable=import-error,no-name-in-module
@@ -31,6 +31,7 @@ def register(mcp: FastMCP) -> None:
         )
     )
     def get_screenshot_of_window_as_image(
+        blender_host: BlenderHost,
         size_limit_in_bytes: int = 0,
     ) -> Image:
         """
@@ -40,7 +41,7 @@ def register(mcp: FastMCP) -> None:
         Zero (the default) uses the MCP message size limit.
         """
         p = Params(size_limit_in_bytes=size_limit_in_bytes)
-        response = send_code(toolcode_format_call(_TOOL_CALL, p), strict_json=True)
+        response = send_code(toolcode_format_call(_TOOL_CALL, p), strict_json=True, host=blender_host)
         if response.get("status") != "ok":
             raise RuntimeError(str(response.get("message", "Unknown error")))
         result = response["result"]

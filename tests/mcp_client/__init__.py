@@ -38,6 +38,7 @@ class MCPClient:
         self,
         command: list[str],
         env: dict[str, str] | None = None,
+        blender_host: str = "localhost",
     ) -> None:
         self._proc = subprocess.Popen(
             command,
@@ -46,6 +47,10 @@ class MCPClient:
             env=env,
         )
         self._next_id = 1
+        # Tools require `blender_host`, this client adds it when a test does not pass one
+        # (pass an explicit `"blender_host"` argument to override, e.g. to test the error).
+        self._blender_host = blender_host
+        self._host_tools: set[str] = set()
 
     def _send_request(self, method: str, params: dict[str, object] | None = None) -> dict[str, Any]:
         """
@@ -136,7 +141,12 @@ class MCPClient:
         Return the names of all tools the server exposes.
         """
         result = self._send_request("tools/list")
-        return [t["name"] for t in result.get("tools", [])]
+        tools = result.get("tools", [])
+        self._host_tools = {
+            t["name"] for t in tools
+            if "blender_host" in (t.get("inputSchema", {}).get("properties") or {})
+        }
+        return [t["name"] for t in tools]
 
     def call_tool(
         self,
@@ -146,6 +156,8 @@ class MCPClient:
         """
         Call an MCP tool by name and return the result.
         """
+        if name in self._host_tools:
+            arguments = {"blender_host": self._blender_host, **(arguments or {})}
         params: dict[str, object] = {"name": name}
         if arguments is not None:
             params["arguments"] = arguments
